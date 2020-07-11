@@ -1,11 +1,11 @@
-package cl.blackmind.core.coroutines
+package gt.tribal.core.coroutines
 
-import cl.blackmind.core.extension.LiveResult
-import cl.blackmind.core.extension.postCancel
-import cl.blackmind.core.extension.postEmpty
-import cl.blackmind.core.extension.postLoading
-import cl.blackmind.core.extension.postSuccess
-import cl.blackmind.core.extension.postThrowable
+import gt.tribal.core.extension.LiveResult
+import gt.tribal.core.extension.postCancel
+import gt.tribal.core.extension.postEmpty
+import gt.tribal.core.extension.postLoading
+import gt.tribal.core.extension.postSuccess
+import gt.tribal.core.extension.postThrowable
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch

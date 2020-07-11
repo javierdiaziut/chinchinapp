@@ -5,7 +5,7 @@
     android:id="@+id/fragment_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cl.blackmind.app.ui.activity.MainActivity">
+    tools:context="gt.tribal.app.ui.activity.MainActivity">
 
   <androidx.recyclerview.widget.RecyclerView
       android:id="@+id/taskRecycler"

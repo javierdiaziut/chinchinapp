@@ -1,8 +1,8 @@
-package cl.blackmind.core.extension
+package gt.tribal.core.extension
 
 import androidx.lifecycle.MutableLiveData
-import cl.blackmind.core.coroutines.Completable
-import cl.blackmind.core.coroutines.Result
+import gt.tribal.core.coroutines.Completable
+import gt.tribal.core.coroutines.Result
 
 typealias LiveResult<T> = MutableLiveData<Result<T>>
 typealias LiveCompletable = MutableLiveData<Completable>

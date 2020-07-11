@@ -1,10 +1,10 @@
-package cl.blackmind.core.extension
+package gt.tribal.core.extension
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
-import cl.blackmind.core.coroutines.Completable
+import gt.tribal.core.coroutines.Completable
 
 /* Observers */
 fun <T, L : LiveData<T>> FragmentActivity.observe(liveData: L, body: (T?) -> Unit) =

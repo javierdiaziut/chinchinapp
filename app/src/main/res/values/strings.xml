@@ -1,5 +1,20 @@
 <resources>
-    <string name="app_name">Notes</string>
+    <string name="app_name">Tribal</string>
     <string name="title_activity_main2">Main2Activity</string>
-    <string name="com.crashlytics.android.build_id">223205775</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="likes_number">Likes %s</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_favorites">Favorites</string>
+    <string name="fav_success">Saved!</string>
+    <string name="fav_error">Error saving</string>
+    <string name="delete_success">Image Deleted!</string>
+    <string name="delete_error">Error deleting</string>
+    <string name="empty_list">You do not have any favorite image yet!</string>
+    <string name="collections_ph">Collections</string>
+    <string name="photos_ph">Photos</string>
+    <string name="likes_ph">Likes</string>
+
 </resources>

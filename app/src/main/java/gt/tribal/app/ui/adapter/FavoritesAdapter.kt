@@ -15,10 +15,11 @@ import gt.tribal.app.R
 import gt.tribal.app.domain.response.PhotoItemHome
 import kotlinx.android.synthetic.main.item_photo.view.*
 
-class PhotoGridAdapter(val context: Context, var data: ArrayList<PhotoItemHome>): RecyclerView.Adapter<PhotoGridAdapter.ViewHolder>() {
+class FavoritesAdapter(val context: Context, var data: ArrayList<PhotoItemHome>) :
+    RecyclerView.Adapter<FavoritesAdapter.ViewHolder>() {
 
     private val mInflater: LayoutInflater = LayoutInflater.from(context)
-    private var itemUserListener: ItemUserListener? = null
+    private var deleteListener: DeleteListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = mInflater.inflate(R.layout.item_photo, parent, false)
@@ -26,7 +27,7 @@ class PhotoGridAdapter(val context: Context, var data: ArrayList<PhotoItemHome>)
     }
 
     override fun getItemCount(): Int {
-       return data.size
+        return data.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -44,16 +45,16 @@ class PhotoGridAdapter(val context: Context, var data: ArrayList<PhotoItemHome>)
 
         var width = 0
         var height = 0
-        if(position % 2 == 0){
+        if (position % 2 == 0) {
             width = 300
             height = 400
-        }else{
+        } else {
             width = 300
             height = 300
         }
         Glide.with(context)
-            .load(data[position].urls.full).
-                override(width, height).listener(object : RequestListener<Drawable> {
+            .load(data[position].urls.full).override(width, height)
+            .listener(object : RequestListener<Drawable> {
                 override fun onLoadFailed(
                     e: GlideException?,
                     model: Any?,
@@ -76,22 +77,27 @@ class PhotoGridAdapter(val context: Context, var data: ArrayList<PhotoItemHome>)
             })
             .into(holder.itemView.imageviewWidget)
 
-        if(data[position].isFavorite){
-            holder.itemView.imageFav.setImageDrawable(context.getDrawable(R.drawable.ic_favorite))
+
+        holder.itemView.imageFav.setImageDrawable(context.getDrawable(R.drawable.ic_favorite))
+
+        holder.itemView.imageFav.setOnClickListener {
+            deleteListener?.onDeletePhoto(position)
         }
-        holder.itemView.imageFav.setOnClickListener{
-            itemUserListener!!.onSaveUser(position)
-            holder.itemView.imageFav.setImageDrawable(context.getDrawable(R.drawable.ic_favorite))
+
+        holder.itemView.userAvatar.setOnClickListener {
+            deleteListener?.onSelected(position)
         }
     }
 
     inner class ViewHolder internal constructor(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    interface ItemUserListener {
-        fun onSaveUser(position: Int)
+    interface DeleteListener {
+        fun onDeletePhoto(position: Int)
+        fun onSelected(position: Int)
     }
+
     // allows clicks events to be caught
-    internal fun setClickListener(itemUserListener: PhotoGridAdapter.ItemUserListener) {
-        this.itemUserListener = itemUserListener
+    internal fun setClickListener(deleteUserListener: FavoritesAdapter.DeleteListener) {
+        this.deleteListener = deleteUserListener
     }
 }

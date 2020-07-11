@@ -1,2 +1,2 @@
-package cl.blackmind.core.extension
+package gt.tribal.core.extension
 

@@ -1,4 +1,4 @@
-package cl.blackmind.core.coroutines
+package gt.tribal.core.coroutines
 
 sealed class Completable {
     object OnComplete : Completable()

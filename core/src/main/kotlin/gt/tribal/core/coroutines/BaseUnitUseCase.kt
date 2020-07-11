@@ -1,4 +1,4 @@
-package cl.blackmind.core.coroutines
+package gt.tribal.core.coroutines
 
 import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.Job

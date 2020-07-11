@@ -47,11 +47,13 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.androidx_lifecycle}"
 
     implementation "androidx.legacy:legacy-support-v4:${versions.legacy_v4}"
-
-    implementation "com.squareup.okhttp3:okhttp:${versions.okhttp}"
     implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
     implementation "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
 
     implementation "com.google.firebase:firebase-core:${versions.firebase_core}"
     implementation "com.crashlytics.sdk.android:crashlytics:${versions.crashlytics}"
+
+    implementation "org.koin:koin-android:${versions.koin}"
+    implementation "org.koin:koin-androidx-scope:${versions.koin}"
+    implementation "org.koin:koin-androidx-viewmodel:${versions.koin}"
 }

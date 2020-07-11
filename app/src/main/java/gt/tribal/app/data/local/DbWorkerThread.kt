@@ -1,4 +1,4 @@
-package cl.blackmind.app.data.local
+package gt.tribal.app.data.local
 
 import android.os.Handler
 import android.os.HandlerThread

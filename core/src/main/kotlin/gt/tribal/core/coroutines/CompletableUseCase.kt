@@ -1,10 +1,10 @@
-package cl.blackmind.core.coroutines
+package gt.tribal.core.coroutines
 
-import cl.blackmind.core.extension.LiveCompletable
-import cl.blackmind.core.extension.postCancel
-import cl.blackmind.core.extension.postComplete
-import cl.blackmind.core.extension.postLoading
-import cl.blackmind.core.extension.postThrowable
+import gt.tribal.core.extension.LiveCompletable
+import gt.tribal.core.extension.postCancel
+import gt.tribal.core.extension.postComplete
+import gt.tribal.core.extension.postLoading
+import gt.tribal.core.extension.postThrowable
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

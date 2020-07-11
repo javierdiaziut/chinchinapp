@@ -1,4 +1,7 @@
 package gt.tribal.app.domain.response
 
-class ProfileImageData {
-}
+data class ProfileImageData(
+    val small : String,
+    val medium : String,
+    val large : String
+)

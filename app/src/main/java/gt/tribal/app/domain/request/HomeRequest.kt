@@ -1,5 +1,5 @@
-package gt.tribal.app.domain
+package gt.tribal.app.domain.request
 
 data class HomeRequest(
-    val token: String
+    val clientId: String
 )

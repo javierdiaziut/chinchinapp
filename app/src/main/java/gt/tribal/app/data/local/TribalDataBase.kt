@@ -4,22 +4,25 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import gt.tribal.app.data.database.PhotoDao
 import gt.tribal.app.ui.PhotoEntity
 
 
 @Database(entities = [PhotoEntity::class], version = 1)
-abstract class TaskDataBase : RoomDatabase() {
+abstract class TribalDataBase : RoomDatabase() {
+
+    abstract fun photoDao(): PhotoDao
 
 
     companion object {
-        private var INSTANCE: TaskDataBase? = null
+        private var INSTANCE: TribalDataBase? = null
 
-        fun getInstance(context: Context): TaskDataBase? {
+        fun getInstance(context: Context): TribalDataBase? {
             if (INSTANCE == null) {
-                synchronized(TaskDataBase::class) {
+                synchronized(TribalDataBase::class) {
                     INSTANCE = Room.databaseBuilder(
                         context.applicationContext,
-                        TaskDataBase::class.java, "photos.db"
+                        TribalDataBase::class.java, "photos.db"
                     ).build()
                 }
             }

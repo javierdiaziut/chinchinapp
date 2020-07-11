@@ -5,7 +5,7 @@ import gt.tribal.app.ui.PhotoEntity
 import gt.tribal.core.coroutines.ResultUnitUseCase
 import kotlinx.coroutines.Dispatchers
 
-class PhotoLocalUseCase(
+class GetPhotoLocalUseCase(
     private val photoLocalRepository: PhotoLocalRepository
 ) : ResultUnitUseCase<List<PhotoEntity>>(
     backgroundContext = Dispatchers.IO,

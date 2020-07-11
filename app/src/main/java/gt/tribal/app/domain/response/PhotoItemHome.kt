@@ -1,6 +1,6 @@
 package gt.tribal.app.domain.response
 
-data class HomeResponse(
+data class PhotoItemHome(
     val id: String,
     val created_at: String,
     val updated_at: String,
@@ -12,7 +12,8 @@ data class HomeResponse(
     val alt_description: String,
     val urls: UrlData,
     val likes: Int,
-    val user: UserData
+    val user: UserData,
+    var isFavorite: Boolean = false
 
 )
 

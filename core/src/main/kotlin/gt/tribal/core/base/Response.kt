@@ -1,4 +1,4 @@
-package cl.blackmind.core.base
+package gt.tribal.core.base
 
 data class Response<T>(
     val data: T,

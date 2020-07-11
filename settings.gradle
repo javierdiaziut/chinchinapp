@@ -1,6 +1,2 @@
 include ':app', ':core'
-include ':firebase'
-include ':app-remote'
-include ':app-local'
-include ':app-domain'
 include ':core-kotlin'

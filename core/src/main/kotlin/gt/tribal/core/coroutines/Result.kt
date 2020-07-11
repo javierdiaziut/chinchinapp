@@ -1,4 +1,4 @@
-package cl.blackmind.core.coroutines
+package gt.tribal.core.coroutines
 
 sealed class Result<T> {
     data class OnSuccess<T>(val value: T) : Result<T>()

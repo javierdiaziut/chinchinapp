@@ -1,4 +1,4 @@
-package cl.blackmind.core.base.responseWithMessage
+package gt.tribal.core.base.responseWithMessage
 
 data class ResponseWithMessage<T>(
     val data: T,
