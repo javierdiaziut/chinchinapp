@@ -1,7 +1,7 @@
-package gt.tribal.app.domain.repository
+package ve.chinchin.app.domain.repository
 
-import gt.tribal.app.domain.response.RateResponse
-import gt.tribal.app.domain.source.HomeRemoteDataSource
+import ve.chinchin.app.domain.response.RateResponse
+import ve.chinchin.app.domain.source.HomeRemoteDataSource
 
 class HomeRepository(private val homeRemoteDataSource: HomeRemoteDataSource) {
 

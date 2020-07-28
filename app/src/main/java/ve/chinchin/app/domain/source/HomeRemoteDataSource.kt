@@ -1,7 +1,7 @@
-package gt.tribal.app.domain.source
+package ve.chinchin.app.domain.source
 
-import gt.tribal.app.data.remote.HomeApi
-import gt.tribal.app.domain.response.RateResponse
+import ve.chinchin.app.data.remote.HomeApi
+import ve.chinchin.app.domain.response.RateResponse
 import gt.tribal.core.extension.await
 
 

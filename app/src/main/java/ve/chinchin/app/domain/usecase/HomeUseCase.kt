@@ -1,11 +1,11 @@
-package gt.tribal.app.domain.usecase
+package ve.chinchin.app.domain.usecase
 
-import gt.tribal.app.domain.repository.HomeRepository
-import gt.tribal.app.domain.response.RateResponse
+import ve.chinchin.app.domain.repository.HomeRepository
+import ve.chinchin.app.domain.response.RateResponse
 import gt.tribal.core.coroutines.ResultUnitUseCase
 import kotlinx.coroutines.Dispatchers
 
-open class HomeUseCase(private val homeRepository: HomeRepository): ResultUnitUseCase< RateResponse>(
+open class HomeUseCase(private val homeRepository: HomeRepository): ResultUnitUseCase<RateResponse>(
     backgroundContext = Dispatchers.IO,
     foregroundContext = Dispatchers.Main
 ) {

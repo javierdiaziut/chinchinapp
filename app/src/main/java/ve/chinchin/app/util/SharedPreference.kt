@@ -1,4 +1,4 @@
-package gt.tribal.app.util
+package ve.chinchin.app.util
 
 import android.content.Context
 import android.content.SharedPreferences

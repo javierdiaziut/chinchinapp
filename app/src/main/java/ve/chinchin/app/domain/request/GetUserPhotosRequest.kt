@@ -1,4 +1,4 @@
-package gt.tribal.app.domain.request
+package ve.chinchin.app.domain.request
 
 data class GetUserPhotosRequest(
     val clientId: String,

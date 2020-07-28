@@ -1,13 +1,12 @@
-package gt.tribal.app.ui.activity
+package ve.chinchin.app.ui.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import gt.tribal.app.R
-import gt.tribal.app.databinding.ActivityLoginBinding
-import gt.tribal.app.util.SharedPreference
-import kotlinx.android.synthetic.main.activity_login.*
+import ve.chinchin.app.R
+import ve.chinchin.app.databinding.ActivityLoginBinding
+import ve.chinchin.app.util.SharedPreference
 
 class LoginActivity : AppCompatActivity() {
 
@@ -28,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
         binding.textInputUser.isErrorEnabled = true
         binding.textInputPass.isErrorEnabled = true
         binding.textViewErrorLogin.visibility = View.INVISIBLE
-        var aux : Boolean = true
+        var aux = true
         if(binding.editUserLogin.text!!.trim().isEmpty()){
             binding.textInputUser.error = getString(R.string.usuario_error)
             aux = false

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="gt.tribal.app.ui.fragment.HomeFragment">
+    tools:context="ve.">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -19,15 +19,182 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <TextView
+        android:id="@+id/labelAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/light_blue"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:text="@string/monto_label"
+        android:textSize="15sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"/>
 
+    <EditText
+        android:id="@+id/editAmount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelAmount"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:maxLength="5"/>
+
+    <TextView
+        android:id="@+id/labelBtc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editAmount"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/btc_label"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/labelBtc"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:text="@string/calculate_label"/>
+
+
+    <TextView
+        android:id="@+id/labelUsd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/usd_label"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/textRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelAmount"
+        app:layout_constraintStart_toEndOf="@+id/labelUsd"
+        tools:text="- Tasa : 100012 -"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/totalUsd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelAmount"
+        app:layout_constraintStart_toEndOf="@+id/textRate"
+        tools:text="Total: 58484524574"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/labelEur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelUsd"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/eur_label"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/textRateEur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelUsd"
+        app:layout_constraintStart_toEndOf="@+id/labelEur"
+        tools:text="- Tasa : 100012 -"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/totalEur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelUsd"
+        app:layout_constraintStart_toEndOf="@+id/textRateEur"
+        tools:text="Total: 58484524574"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/labelBs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelEur"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/bs_label"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/textRateBs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelEur"
+        app:layout_constraintStart_toEndOf="@+id/labelBs"
+        tools:text="- Tasa : 100012 -"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/totalBs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelEur"
+        app:layout_constraintStart_toEndOf="@+id/textRateBs"
+        tools:text="Total: 58484524574"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/labelYuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelBs"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/yuan_label"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:id="@+id/textRateYuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelBs"
+        app:layout_constraintStart_toEndOf="@+id/labelYuan"
+        tools:text="- Tasa : 100012 -"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/totalYuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/labelBs"
+        app:layout_constraintStart_toEndOf="@+id/textRateYuan"
+        tools:text="Total: 58484524574"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"/>
+
+
+    <Button
+        android:id="@+id/btnQr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/totalYuan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/qr_label"
+        android:layout_marginTop="30dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

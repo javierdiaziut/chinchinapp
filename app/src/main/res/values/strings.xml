@@ -1,20 +1,41 @@
 <resources>
-    <string name="app_name">Tribal</string>
+    <string name="app_name">Chinchin</string>
     <string name="title_activity_main2">Main2Activity</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="likes_number">Likes %s</string>
-    <string name="tab_home">Home</string>
-    <string name="tab_favorites">Favorites</string>
-    <string name="fav_success">Saved!</string>
-    <string name="fav_error">Error saving</string>
-    <string name="delete_success">Image Deleted!</string>
-    <string name="delete_error">Error deleting</string>
-    <string name="empty_list">You do not have any favorite image yet!</string>
-    <string name="collections_ph">Collections</string>
-    <string name="photos_ph">Photos</string>
-    <string name="likes_ph">Likes</string>
+    <!-- Login -->
+    <string name="usuario_hint">User</string>
+    <string name="pass_hint">Password</string>
+    <string name="wrong_auth">Username or password incorrect!</string>
+    <string name="log_in">Log in</string>
+    <string name="usuario_error">Please, fill your username</string>
+    <string name="pass_error">Please, fill your password</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+    <!-- Home -->
+    <string name="monto_label">Monto: </string>
+    <string name="btc_label">BTC </string>
+    <string name="calculate_label">Calcular</string>
+    <string name="qr_label">Generar QR</string>
+    <string name="usd_label">USD</string>
+    <string name="eur_label">EURO</string>
+    <string name="bs_label">BS</string>
+    <string name="yuan_label">YUAN</string>
+    <string name="error_conection">Ha ocurrido un error, por favor reinicie la aplicación</string>
+    <string name="format_rate">- Tasa: %s-</string>
+    <string name="format_total">Total: %s</string>
 
 </resources>

@@ -1,10 +1,8 @@
-package gt.tribal.app.ui.activity
+package ve.chinchin.app.ui.activity
 
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -15,9 +13,9 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-import gt.tribal.app.R
-import gt.tribal.app.util.SharedPreference
+import ve.chinchin.app.util.SharedPreference
 import kotlinx.android.synthetic.main.activity_home.*
+import ve.chinchin.app.R
 
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 

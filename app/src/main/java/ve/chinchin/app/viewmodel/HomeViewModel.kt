@@ -1,8 +1,8 @@
-package gt.tribal.app.viewmodel
+package ve.chinchin.app.viewmodel
 
 import androidx.lifecycle.ViewModel
-import gt.tribal.app.domain.response.RateResponse
-import gt.tribal.app.domain.usecase.HomeUseCase
+import ve.chinchin.app.domain.response.RateResponse
+import ve.chinchin.app.domain.usecase.HomeUseCase
 import gt.tribal.core.extension.LiveResult
 
 class HomeViewModel (private val homeUseCase: HomeUseCase

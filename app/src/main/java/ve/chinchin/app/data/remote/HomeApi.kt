@@ -1,6 +1,6 @@
-package gt.tribal.app.data.remote
+package ve.chinchin.app.data.remote
 
-import gt.tribal.app.domain.response.RateResponse
+import ve.chinchin.app.domain.response.RateResponse
 import retrofit2.Call
 import retrofit2.http.GET
 

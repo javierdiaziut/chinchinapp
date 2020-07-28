@@ -1,7 +1,6 @@
-package gt.tribal.app.util
+package ve.chinchin.app.util
 
 import android.content.SharedPreferences
-import androidx.core.content.edit
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 

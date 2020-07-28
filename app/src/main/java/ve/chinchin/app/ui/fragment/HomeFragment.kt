@@ -1,4 +1,4 @@
-package gt.tribal.app.ui.fragment
+package ve.chinchin.app.ui.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,16 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import gt.tribal.app.R
-import gt.tribal.app.databinding.FragmentHomeBinding
-import gt.tribal.app.domain.response.GeneralRateBean
-import gt.tribal.app.domain.response.RateResponse
-import gt.tribal.app.ui.activity.QrActivity
-import gt.tribal.app.util.SharedPreference
-import gt.tribal.app.viewmodel.HomeViewModel
+
+import ve.chinchin.app.domain.response.GeneralRateBean
+import ve.chinchin.app.domain.response.RateResponse
+import ve.chinchin.app.ui.activity.QrActivity
+import ve.chinchin.app.viewmodel.HomeViewModel
 import gt.tribal.core.coroutines.Result
 import gt.tribal.core.extension.observe
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import ve.chinchin.app.R
+import ve.chinchin.app.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
@@ -55,7 +55,8 @@ class HomeFragment : Fragment() {
         binding.btnQr.setOnClickListener {
 
             if(binding.editAmount.text.toString().trim().isNotEmpty()){
-                val intent = Intent(activity,QrActivity::class.java)
+                val intent = Intent(activity,
+                    QrActivity::class.java)
                 intent.putExtra("content",binding.editAmount.text.toString().trim())
                 startActivity(intent)
             }

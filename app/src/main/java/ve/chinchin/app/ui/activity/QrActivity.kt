@@ -1,4 +1,4 @@
-package gt.tribal.app.ui.activity
+package ve.chinchin.app.ui.activity
 
 import android.graphics.Bitmap
 import android.graphics.Color
@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
-import gt.tribal.app.databinding.ActivityQrBinding
+import ve.chinchin.app.databinding.ActivityQrBinding
 
 class QrActivity : AppCompatActivity() {
     private var content: String? = null

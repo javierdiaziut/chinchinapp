@@ -1,25 +1,22 @@
-package gt.tribal.app.di
+package ve.chinchin.app.di
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.net.ConnectivityManager
-import androidx.room.Room
-import gt.tribal.app.data.remote.HomeApi
-import gt.tribal.app.domain.repository.HomeRepository
-import gt.tribal.app.domain.source.HomeRemoteDataSource
-import gt.tribal.app.domain.usecase.*
-import gt.tribal.app.util.AppPreferences
-import gt.tribal.app.util.AppPreferences.DATABASE_NAME
-import gt.tribal.app.util.AppPreferences.URL_BASE_API
-import gt.tribal.app.viewmodel.HomeViewModel
+import ve.chinchin.app.data.remote.HomeApi
+import ve.chinchin.app.domain.repository.HomeRepository
+import ve.chinchin.app.domain.source.HomeRemoteDataSource
+import ve.chinchin.app.util.AppPreferences
+import ve.chinchin.app.util.AppPreferences.URL_BASE_API
+import ve.chinchin.app.viewmodel.HomeViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.koin.android.ext.koin.androidApplication
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import ve.chinchin.app.domain.usecase.HomeUseCase
 import java.util.concurrent.TimeUnit
 
 val appModule = module {
